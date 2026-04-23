@@ -3,47 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colors & Emotions Interactive Application</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        .color-box {
-            width: 100px;
-            height: 100px;
-            margin: 10px;
-            cursor: pointer;
-            display: inline-block;
-            border-radius: 10px;
-        }
-        #message {
-            margin-top: 20px;
-            font-size: 1.5em;
-            color: #333;
-        }
-    </style>
+    <title>Color Emotions</title>
 </head>
 <body>
-    <h1>Colors & Emotions</h1>
-    <div class="color-box" style="background-color: red;" onclick="showEmotion('Anger')"></div>
-    <div class="color-box" style="background-color: blue;" onclick="showEmotion('Sadness')"></div>
-    <div class="color-box" style="background-color: yellow;" onclick="showEmotion('Happiness')"></div>
-    <div class="color-box" style="background-color: green;" onclick="showEmotion('Calmness')"></div>
-    <div class="color-box" style="background-color: orange;" onclick="showEmotion('Enthusiasm')"></div>
-    <div class="color-box" style="background-color: purple;" onclick="showEmotion('Creativity')"></div>
-    <div id="message"></div>
-
-    <script>
-        function showEmotion(emotion) {
-            document.getElementById('message').textContent = `You clicked on ${emotion}!`;
-        }
-    </script>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/colors/red">Red</a></li>
+                <li><a href="/colors/blue">Blue</a></li>
+                <li><a href="/colors/green">Green</a></li>
+                <li><a href="/colors/yellow">Yellow</a></li>
+                <li><a href="/colors/purple">Purple</a></li>
+                <!-- Add more colors as necessary -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Choose a Color</h1>
+        <div class="color-cards">
+            <div class="color-card" onclick="location.href='/colors/red'" style="background-color:red;">Red</div>
+            <div class="color-card" onclick="location.href='/colors/blue'" style="background-color:blue;">Blue</div>
+            <div class="color-card" onclick="location.href='/colors/green'" style="background-color:green;">Green</div>
+            <div class="color-card" onclick="location.href='/colors/yellow'" style="background-color:yellow;">Yellow</div>
+            <div class="color-card" onclick="location.href='/colors/purple'" style="background-color:purple;">Purple</div>
+            <!-- Add more color cards as necessary -->
+        </div>
+    </main>
 </body>
 </html>
